@@ -1,21 +1,26 @@
 import "./App.css";
-import ListGroup from "./components/ListGroup";
-import Button from "./components/Button";
-import Message from "./Message";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Work from "./pages/Work";
+import Contact from "./pages/Contact";
 
 function App() {
-  const items = ["New York", "Los Angeles", "Chicago", "Houston"];
-
-  const handleSelectItem = (item: string) => {
-    console.log(item);
-  };
-
   return (
-    <div>
-      <ListGroup items = {items} heading= "Cities" onSelectItem = {handleSelectItem} />
-      <Button onClick={() => console.log("Clicked")}>My Button</Button>
-    
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/work" element={<Work />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route
+          path="*"
+          element={
+            <main className="page-not-found">
+              <p>Page not found</p>
+            </main>
+          }
+        />
+      </Routes>
+    </>
   );
 }
 
