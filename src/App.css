@@ -75,6 +75,39 @@ nav {
   animation-timing-function: ease-in-out;
 }
 
+.shootingStar {
+  position: absolute;
+  height: 10vh;
+  top: 20%;
+  right: 0;
+  transform: translate(0, -50%);
+  animation-name: shoot;
+  animation-duration: 10s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+
+main {
+  flex-grow: 1;
+  display: relative;
+}
+
+.homeText {
+  padding: 30vh;
+  color: white;
+  position: relative;
+  margin-bottom: -80vh;
+}
+
+footer {
+  width: 100%;
+  background-color: blue;
+  color: red;
+  text-align: center;
+}
+
+/* ANIMATIONS */
+
 @keyframes floating {
   0% {
     transform: translate(0, 0px);
@@ -87,21 +120,18 @@ nav {
   }
 }
 
-main {
-  flex-grow: 1;
-  display: relative;
-}
-
-.homeText {
-  padding: 30vh;
-  color: white;
-  position: relative;
-  margin-bottom: -90vh;
-}
-
-footer {
-  width: 100%;
-  background-color: blue;
-  color: red;
-  text-align: center;
+@keyframes shoot {
+  0% {
+    right: 0;
+  }
+  10% {
+    right: calc(
+      100% - 50px
+    );
+  }
+  100% {
+    right: calc(
+      100% - 50px
+    ); /* Move the element to the right edge of the page */
+  }
 }

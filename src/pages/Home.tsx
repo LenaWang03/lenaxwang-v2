@@ -2,6 +2,7 @@ import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import landingBG from "../imgs/landingBG.svg";
 import landingCat from "../imgs/landingCat.svg";
+import shootingStar from "../imgs/shootingStar.svg";
 
 const Home = () => {
   return (
@@ -9,12 +10,14 @@ const Home = () => {
       <NavBar />
       <main className="homeContent">
         <div className="homeText">
-          <h1>Hello, I'm </h1>
-          <span className="hugeFont">Lena Wang.</span>
-          <h3>I enjoy</h3>
+          <p>Hello traveller, </p>
+          <span className="hugeFont">Are You Lost?</span>
+          <h1>You've stumbled upon Lena's domain</h1>
+          <p>While you're here I guess I can tell you a bit about her...</p>
         </div>
         <img alt="landingBG" src={landingBG} />
         <img className="landingCat" alt="landingCat" src={landingCat} />
+        <img className="shootingStar" alt="shootingStar" src={shootingStar} />
       </main>
 
       <Footer />

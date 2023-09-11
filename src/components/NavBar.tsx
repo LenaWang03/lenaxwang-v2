@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import navbarLogo from "../imgs/LWLogo.svg";
+import navbarLogo from "../imgs/CatLogo.svg";
 
 const NavBar = () => {
   return (
