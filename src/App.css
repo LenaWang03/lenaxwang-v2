@@ -41,7 +41,7 @@ nav {
   justify-content: space-between;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 100;
 }
 
 .navbar-logo {
@@ -75,6 +75,11 @@ nav {
   animation-timing-function: ease-in-out;
 }
 
+.landingBG {
+  position: absolute;
+  z-index: -1;
+}
+
 .shootingStar {
   position: absolute;
   height: 10vh;
@@ -87,6 +92,21 @@ nav {
   animation-iteration-count: infinite;
 }
 
+.landingRing {
+  width: 220vw;
+  height: 220vw;
+  top: 85vh;
+  left: -30vw;
+  position: absolute;
+  transform-origin: center; /* Set the rotation origin to the center of the circle */
+  animation: rotate 10s linear infinite; /* Adjust duration as needed */
+
+}
+
+.two {
+  animation: rotate 20s linear infinite; /* Adjust duration as needed */
+}
+
 main {
   flex-grow: 1;
   display: relative;
@@ -97,6 +117,82 @@ main {
   color: white;
   position: relative;
   margin-bottom: -80vh;
+}
+
+.homeContent {
+  padding: 15vw 15vw;
+}
+
+.rightText {
+  display: flex;
+  text-align: right;
+  z-index: 1;
+  position: relative;
+  padding: 100px 0;
+  margin-left: 40vh;
+}
+
+.inlineBlock {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.centeredText {
+  text-align: center;
+}
+
+/* experience */
+.experience-card {
+  display: flex;
+  margin-top: 200px;
+}
+.experience-card .demo-image img{
+  height: 25vw;
+}
+.experience-card .logo img{
+  height: 5vw;
+}
+.experience-card h2 {
+  font-size: xx-large;
+}
+.experience-text p {
+  color:grey;
+}
+.experience-card .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.experience-card .tag {
+  background-color: #505050;
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+  font-size: smaller;
+}
+
+
+.skills {
+  background-color: red;
+  height: 300px;
+  text-align: center;
+}
+
+.origin {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.streak {
+  width: 400px;
+}
+
+.room {
+  padding-top: 300px;
+  width: 400px;
 }
 
 footer {
@@ -125,13 +221,20 @@ footer {
     right: 0;
   }
   10% {
-    right: calc(
-      100% - 50px
-    );
+    right: calc(100% - 50px);
   }
   100% {
     right: calc(
       100% - 50px
     ); /* Move the element to the right edge of the page */
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
